@@ -7,13 +7,14 @@ posts = [
         'title': 'Blog Post 1',
         'content': 'First post content',
         'date_posted': 'January 1, 2023'
-    },{
+    }, {
         'author': 'Kri Jam',
         'title': 'Blog Post 2',
         'content': 'Second post content',
         'date_posted': 'January 2, 2023'
     }
 ]
+
 
 @app.route("/")
 @app.route("/home")
@@ -23,8 +24,7 @@ def home():
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
-
+    return render_template('about.html', title='About')
 
 
 if __name__ == '__main__':
